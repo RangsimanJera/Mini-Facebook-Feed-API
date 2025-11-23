@@ -10,7 +10,7 @@ new Elysia()
   .derive(() => ({
     userId: null as string | null
   }))
-  .derive(({ request, store }) => {
+  .derive(({ request }) => {
     const id = request.headers.get('x-user-id')
     return { userId: id }
   })
